@@ -9,7 +9,6 @@ class App extends Component {
   state = {
     cityName: '',
     weathers: false,
-    forecasts: false
   }
 
   handleSearch = e => {
@@ -31,7 +30,7 @@ class App extends Component {
   }
   
   render() {
-    const {cityName, weathers, forecasts} = this.state
+    const {cityName, weathers} = this.state
 
     return(
       <div>
