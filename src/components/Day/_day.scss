@@ -1,0 +1,16 @@
+.dailyWeather {
+    width: 15%;
+
+    p {
+        font-weight: 200;
+        text-align: center;
+
+        &.tempMax {
+            font-size: 22px;
+        }
+
+        &.tempMin {
+            font-size: 14px;
+        }
+    }
+}

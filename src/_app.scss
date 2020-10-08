@@ -1,0 +1,16 @@
+body {
+    background-color: #F7E37E;
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .day {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    
+    }
+}
