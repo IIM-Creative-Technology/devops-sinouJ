@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Weather from './components/Weather/Weather'
 import Searchbar from './components/Searchbar/Searchbar';
-import Day from './components/Day/Day';
 import './_app.scss';
 import key from './config/api_key'
 
@@ -29,15 +28,6 @@ class App extends Component {
     this.setState({
       weathers
     })
-
-    // const req2 = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.state.weathers.coord.lat}&lon=${this.state.weathers.coord.lon}&exclude=current,minutely,hourly&appid=c5698bb001c73d6085d451bb2a1d8de3&lang=fr&units=metric`)
-    // const forecasts = await req2.json()
-
-    // const treatement = forecasts.daily.slice(1,6)
-    
-    // this.setState({
-    //   forecasts: treatement
-    // })
   }
   
   render() {
@@ -61,18 +51,6 @@ class App extends Component {
             humidity={weathers.main.humidity}
           />
         }
-        <section className="day">
-          {
-            forecasts === false ? '' : forecasts.map( day =>
-              <Day 
-                key={Math.random()}
-                date={day.dt}
-                tempMax={day.temp.max}
-                tempMin={day.temp.min}
-              />
-            )
-          }
-        </section>
       </div>
     )
   }
